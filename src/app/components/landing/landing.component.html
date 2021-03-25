@@ -1,0 +1,9 @@
+<h1>TIC TAC TOE</h1>
+<h3 *ngIf="wontext">{{wontext}}</h3>
+<div class="content">
+    <div *ngFor="let item of boxArray,let index1 = index" >
+    <div *ngFor="let box of item,let index2 = index" class="box">
+<input class="field" [disabled]="wontext" (click)="turn(index1,index2,$event)" [value]='boxArray[index1][index2]' />
+</div>
+</div>
+</div>
